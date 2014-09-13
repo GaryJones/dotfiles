@@ -1,0 +1,38 @@
+[alias]
+	genesissync = !sh -c \"git fetch upstream &&\ngit merge upstream/master &&\ngit merge upstream/develop &&\ngit push --all origin\"
+[color]
+	ui = true
+[core]
+	autocrlf = input
+	excludesfile = /Users/gary/.gitignore_global
+	editor = /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl -n -w
+	quotepath = false
+
+[credential]
+	helper = osxkeychain
+
+[diff]
+	noprefix = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+
+[init]
+	templatedir = /Applications/SourceTree.app/Contents/Resources/git_local/share/git-core/templates
+
+[merge]
+	defaultToUpstream = true
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+
+	trustExitCode = true
+[push]
+	default = simple
+
+[user]
+	name = Gary Jones
+	email = gary@garyjones.co.uk

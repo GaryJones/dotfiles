@@ -1,4 +1,5 @@
 oh-my-zsh/
-composer
+composer/*
 zsh-update
 zsh_history
+!composer/composer.json

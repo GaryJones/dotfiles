@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phploc/phploc": "*",
+        "phpmd/phpmd": "*",
+        "phpunit/phpunit": "*",
+        "sebastian/phpcpd": "*",
+        "sebastian/phpdcd": "*"
+    }
+}

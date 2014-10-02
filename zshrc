@@ -14,7 +14,7 @@ ZSH_THEME="agnoster"
 # alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias copysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias copyprivatesshkey='pbcopy < ~/.ssh/id_rsa'
-alias update='brew update && brew upgrade && npm update -g && cd ~/.composer && composer self-update && composer update && cd -'
+alias update="~/.cronjobs/update.sh"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"

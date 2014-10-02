@@ -9,7 +9,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="composer oh-my-zsh gitignore_global gitconfig osx.sh zprofile zshenv zshrc"    # list of files/folders to symlink in homedir
+files="composer oh-my-zsh cronjobs crontab gitignore_global gitconfig osx.sh zprofile zshenv zshrc"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -31,7 +31,11 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-
+# Setup cron jobs
+echo "Setting up cron jobs"
+chmod u+x ~/.cronjobs/*.sh
+crontab ~/.crontab
+echo "done"
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
@@ -44,8 +48,8 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
         chsh -s $(which zsh)
     fi
-    echo "Copying ZSH theme into oh-my-zsh/themes"
-    cp $dir/gmj.zsh-theme $dir/oh-my-zsh/themes
+    echo "Copying update agnoster ZSH theme into oh-my-zsh/themes"
+    cp $dir/agnoster.zsh-theme $dir/oh-my-zsh/themes
 else
     # If zsh isn't installed, get the platform of the current machine
     platform=$(uname);

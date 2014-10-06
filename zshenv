@@ -13,5 +13,5 @@ typeset -U path
 path=(~/code/phpcs/scripts /usr/local/git/bin /opt/subversion/bin /usr/local/share/npm/bin ~/.cabal/bin ~/.composer/vendor/bin ~/.rvm/gems/ruby-2.1.1/bin /~/.rvm/gems/ruby-2.1.1@global/bin ~/.rvm/rubies/ruby-2.1.1/bin ~/.rvm/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $path)
 
 export NODE_PATH="/usr/local/lib/node"
-export EDITOR=“subl”
+export EDITOR="subl"
 export WP_TESTS_DIR=~/vagrant/www/wordpress-develop/tests/phpunit

@@ -24,7 +24,7 @@ AUTO_CD=“true”
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(brew colorize git git-flow-avh github jsontools npm scd sublime vagrant zsh-syntax-highlighting)
+plugins=(brew colorize git git-flow-avh github jsontools npm osx scd sublime vagrant zsh-syntax-highlighting)
 
 # ZSH syntax highlighting
 # plugins=(zsh-syntax-highlighting)
@@ -62,3 +62,12 @@ function gz() {
     echo "gzipped size (bytes): "
     gzip -c "$1" | wc -c
 }
+
+function finder {
+ osascript -e 'set cwd to do shell script "pwd"'\
+ -e 'tell application "Finder"'\
+ -e "if (${1-1} <= (count Finder windows)) then"\
+ -e "set the target of window ${1-1} to (POSIX file cwd) as string"\
+ -e 'else' -e "open (POSIX file cwd) as string"\
+ -e 'end if' -e 'end tell';\
+};

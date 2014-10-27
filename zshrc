@@ -64,6 +64,7 @@ function gz() {
     gzip -c "$1" | wc -c
 }
 
+# Change Finder window to show current terminal directory
 function finder {
  osascript -e 'set cwd to do shell script "pwd"'\
  -e 'tell application "Finder"'\

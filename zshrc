@@ -15,6 +15,7 @@ ZSH_THEME="agnoster"
 alias copysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias copyprivatesshkey='pbcopy < ~/.ssh/id_rsa'
 alias update="~/.cronjobs/update.sh"
+alias reload="source $ZSH/oh-my-zsh.sh"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"

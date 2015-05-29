@@ -12,10 +12,12 @@ ZSH_THEME="agnoster"
 
 # Example aliases
 # alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias cc='codecept.phar'
 alias copysshkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias copyprivatesshkey='pbcopy < ~/.ssh/id_rsa'
 alias update="~/.cronjobs/update.sh"
 alias reload="source $ZSH/oh-my-zsh.sh"
+alias imagecheck="file **/*.jpeg **/*.jpg(.N) | grep -v JPEG; file **/*.gif(.N) | grep -v GIF; file **/*.png(.N) | grep -v PNG"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"

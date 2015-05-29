@@ -1,9 +1,24 @@
 {
+	"minimum-stability": "dev",
+	"prefer-stable": true,
     "require": {
         "phploc/phploc": "*",
         "phpmd/phpmd": "*",
         "phpunit/phpunit": "*",
         "sebastian/phpcpd": "*",
-        "sebastian/phpdcd": "*"
-    }
+        "sebastian/phpdcd": "*",
+        "halleck45/phpmetrics": "~1.1",
+        "apigen/apigen": "~4.0",
+		"banago/PHPloy": "^3.1.0"
+    },
+    "repositories": [
+    	{
+    		"url": "https://github.com/banago/PHPloy.git",
+    		"type": "git"
+    	},
+    	{
+    		"url": "https://github.com/banago/bridge.git",
+    		"type": "git"
+    	}
+    ]
 }

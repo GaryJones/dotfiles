@@ -4,6 +4,9 @@
 sftp-config.json
 sftp-config.jsonX
 
+# PHPStorm
+.idea
+
 # OSX
 .DS_Store
 .AppleDouble

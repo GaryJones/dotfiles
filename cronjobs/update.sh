@@ -9,6 +9,10 @@ echo "Homebrew:"
 /usr/local/bin/brew cleanup
 /usr/local/bin/brew prune
 echo ""
+echo "Ruby Gems:"
+/usr/bin/gem update
+/usr/bin/gem cleanup
+echo ""
 echo "NPM:"
 /usr/local/bin/npm update -g --quiet
 /usr/local/bin/npm dedupe -g
